@@ -10,7 +10,7 @@ export default function Testimonials() {
 
   return (
     <section
-      id="reviews"
+      id="story"
       aria-labelledby="reviews-title"
       className="overflow-hidden bg-palm-leaf py-20 text-porcelain sm:py-28 lg:py-36"
     >
