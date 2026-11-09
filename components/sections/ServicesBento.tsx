@@ -53,13 +53,11 @@ export default function ServicesBento() {
             {...reveal(reduceMotion, 0.04)}
             className="group relative isolate min-h-[520px] overflow-hidden bg-cocoa md:col-span-7 md:row-span-2 md:min-h-[620px]"
           >
-            <motion.img
+            <img
               src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=88"
               alt="An elegant celebration reception arranged for guests"
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              whileHover={reduceMotion ? undefined : { scale: 1.05 }}
-              transition={{ duration: 0.8, ease: editorialEase }}
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ${reduceMotion ? "" : "group-hover:scale-105"}`}
             />
             <div
               className="absolute inset-0 bg-cocoa/70 transition-colors duration-500 group-hover:bg-cocoa/60"
@@ -80,14 +78,12 @@ export default function ServicesBento() {
                   aria-label="Enquire about event catering"
                   className="inline-flex size-12 shrink-0 items-center justify-center border border-porcelain/65 text-xl transition-colors duration-300 hover:border-guava hover:bg-guava focus-visible:outline-offset-4"
                 >
-                  <motion.span
+                  <span
                     aria-hidden="true"
-                    animate={{ x: 0 }}
-                    whileHover={reduceMotion ? undefined : { x: 4 }}
-                    transition={{ duration: 0.25, ease: editorialEase }}
+                    className={`transition-transform duration-300 ${reduceMotion ? "" : "group-hover:translate-x-1"}`}
                   >
                     ↗
-                  </motion.span>
+                  </span>
                 </a>
               </div>
             </div>
@@ -117,13 +113,11 @@ export default function ServicesBento() {
               </div>
             </div>
             <div className="relative col-span-5 min-h-full overflow-hidden">
-              <motion.img
+              <img
                 src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85"
                 alt="A bright, well-equipped kitchen ready for a cooking lesson"
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-                whileHover={reduceMotion ? undefined : { scale: 1.05 }}
-                transition={{ duration: 0.8, ease: editorialEase }}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 ${reduceMotion ? "" : "group-hover:scale-105"}`}
               />
             </div>
           </motion.article>
@@ -133,13 +127,11 @@ export default function ServicesBento() {
             className="group relative grid min-h-[340px] grid-cols-12 overflow-hidden bg-guava md:col-span-5 md:min-h-0"
           >
             <div className="relative col-span-5 min-h-full overflow-hidden">
-              <motion.img
+              <img
                 src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=85"
                 alt="Freshly baked cupcakes finished with delicate frosting"
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-                whileHover={reduceMotion ? undefined : { scale: 1.05 }}
-                transition={{ duration: 0.8, ease: editorialEase }}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 ${reduceMotion ? "" : "group-hover:scale-105"}`}
               />
             </div>
             <div className="col-span-7 flex flex-col justify-between p-6 text-right sm:p-8">
