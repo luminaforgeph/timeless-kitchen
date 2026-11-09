@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import type { MouseEvent } from "react";
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -44,7 +45,7 @@ export default function Navbar() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  const navigateToSection = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const navigateToSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
     if (!href.startsWith("#")) return;
 
     event.preventDefault();
