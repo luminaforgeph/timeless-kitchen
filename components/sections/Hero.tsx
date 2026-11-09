@@ -24,7 +24,7 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative grid min-h-screen grid-cols-12 bg-oat"
+      className="relative grid min-h-screen grid-cols-12 overflow-hidden bg-oat"
     >
       <div className="col-span-12 flex min-h-[760px] flex-col px-6 pb-9 pt-36 sm:px-10 md:col-span-5 md:min-h-screen md:px-10 md:pb-12 md:pt-40 lg:px-[clamp(3rem,6.2vw,6.75rem)]">
         <motion.div
