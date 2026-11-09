@@ -75,7 +75,7 @@ export default function ServicesBento() {
                   celebrations and the moments worth remembering.
                 </p>
                 <a
-                  href="#closing-cta"
+                  href="#contact"
                   aria-label="Enquire about event catering"
                   className="inline-flex size-12 shrink-0 items-center justify-center border border-porcelain/65 text-xl transition-colors duration-300 hover:border-guava hover:bg-guava focus-visible:outline-offset-4"
                 >
@@ -148,7 +148,7 @@ export default function ServicesBento() {
                   extra delight to every occasion.
                 </p>
                 <a
-                  href="#closing-cta"
+                  href="#contact"
                   className="ml-auto mt-6 inline-flex items-center gap-3 border-b border-porcelain/65 pb-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-porcelain transition-colors hover:border-cocoa hover:text-cocoa"
                 >
                   Explore the bakehouse
