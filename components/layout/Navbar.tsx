@@ -44,6 +44,27 @@ export default function Navbar() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const navigateToSection = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!href.startsWith("#")) return;
+
+    event.preventDefault();
+    const targetId = href.slice(1);
+    const menuWasOpen = isMenuOpen;
+    setIsMenuOpen(false);
+
+    // Wait for the mobile menu's scroll lock to be released before scrolling.
+    window.setTimeout(() => {
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      window.history.replaceState(null, "", href);
+      target.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "start",
+      });
+    }, menuWasOpen ? 100 : 0);
+  };
+
   return (
     <motion.header
       className="fixed inset-x-0 top-0 z-50"
@@ -83,6 +104,7 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={navigateToSection(item.href)}
                   className={`text-[0.72rem] font-medium tracking-[0.015em] transition-colors duration-300 hover:text-guava focus-visible:outline-offset-4 ${
                     isScrolled ? "text-cocoa" : "text-porcelain"
                   }`}
@@ -94,6 +116,7 @@ export default function Navbar() {
 
             <a
               href="#contact"
+              onClick={navigateToSection("#contact")}
               className={`ml-1 inline-flex min-h-10 items-center justify-center border px-4 text-[0.68rem] font-semibold tracking-[0.04em] transition-colors duration-300 hover:border-guava hover:bg-guava hover:text-porcelain focus-visible:outline-offset-4 ${
                 isScrolled
                   ? "border-cocoa/50 text-cocoa"
@@ -161,7 +184,7 @@ export default function Navbar() {
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={closeMenu}
+                    onClick={navigateToSection(item.href)}
                     className="flex items-center justify-between border-b border-cocoa/15 py-5 font-display text-3xl tracking-editorial transition-colors hover:text-guava focus-visible:outline-offset-2"
                   >
                     <span>{item.label}</span>
@@ -174,7 +197,7 @@ export default function Navbar() {
 
               <a
                 href="#contact"
-                onClick={closeMenu}
+                onClick={navigateToSection("#contact")}
                 className="mt-9 inline-flex min-h-14 items-center justify-center border border-cocoa bg-cocoa px-6 text-sm font-semibold text-porcelain transition-colors hover:border-guava hover:bg-guava focus-visible:outline-offset-4"
               >
                 Plan an event
