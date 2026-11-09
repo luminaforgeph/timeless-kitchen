@@ -48,24 +48,11 @@ export default function Testimonials() {
           </motion.div>
 
           <div className="md:col-span-7">
-            <div className="overflow-hidden">
-              <motion.blockquote
-                initial={{
-                  clipPath: reduceMotion ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
-                }}
-                whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: reduceMotion ? 0 : 1.05,
-                  ease: editorialEase,
-                }}
-                className="font-display text-[clamp(2rem,3.7vw,3.65rem)] leading-[1.16] tracking-[-0.035em]"
-              >
-                “Timeless kitchen is one in a million. I can still perceive the
-                taste of the food I ordered... The Amazing aroma and flavor is
-                still vibrating in my nose till now.”
-              </motion.blockquote>
-            </div>
+            <blockquote className="font-display text-[clamp(2rem,3.7vw,3.65rem)] leading-[1.16] tracking-[-0.035em]">
+              “Timeless kitchen is one in a million. I can still perceive the
+              taste of the food I ordered... The Amazing aroma and flavor is
+              still vibrating in my nose till now.”
+            </blockquote>
             <p className="mt-7 text-xs font-semibold uppercase tracking-[0.12em] text-oat">
               — Zainlinkstravel
             </p>
