@@ -50,9 +50,11 @@ export default function Testimonials() {
           <div className="md:col-span-7">
             <div className="overflow-hidden">
               <motion.blockquote
-                initial={{ y: reduceMotion ? 0 : "105%" }}
-                whileInView={{ y: 0 }}
-                viewport={{ once: true, amount: 0.35 }}
+                initial={{
+                  clipPath: reduceMotion ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
+                }}
+                whileInView={{ clipPath: "inset(0 0 0% 0)" }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{
                   duration: reduceMotion ? 0 : 1.05,
                   ease: editorialEase,
