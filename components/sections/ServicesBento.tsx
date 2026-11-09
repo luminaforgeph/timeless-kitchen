@@ -51,6 +51,7 @@ export default function ServicesBento() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-[minmax(260px,1fr)_minmax(260px,1fr)] md:gap-5">
           <motion.article
             {...reveal(reduceMotion, 0.04)}
+            id="catering"
             className="group relative isolate min-h-[520px] overflow-hidden bg-cocoa md:col-span-7 md:row-span-2 md:min-h-[620px]"
           >
             <img
@@ -74,7 +75,7 @@ export default function ServicesBento() {
                   celebrations and the moments worth remembering.
                 </p>
                 <a
-                  href="#contact"
+                  href="#closing-cta"
                   aria-label="Enquire about event catering"
                   className="inline-flex size-12 shrink-0 items-center justify-center border border-porcelain/65 text-xl transition-colors duration-300 hover:border-guava hover:bg-guava focus-visible:outline-offset-4"
                 >
@@ -91,6 +92,7 @@ export default function ServicesBento() {
 
           <motion.article
             {...reveal(reduceMotion, 0.12)}
+            id="school"
             className="group relative grid min-h-[340px] grid-cols-12 overflow-hidden bg-oat md:col-span-5 md:min-h-0"
           >
             <div className="col-span-7 flex flex-col justify-between p-6 sm:p-8">
@@ -124,6 +126,7 @@ export default function ServicesBento() {
 
           <motion.article
             {...reveal(reduceMotion, 0.2)}
+            id="bakery"
             className="group relative grid min-h-[340px] grid-cols-12 overflow-hidden bg-guava md:col-span-5 md:min-h-0"
           >
             <div className="relative col-span-5 min-h-full overflow-hidden">
@@ -145,7 +148,7 @@ export default function ServicesBento() {
                   extra delight to every occasion.
                 </p>
                 <a
-                  href="#contact"
+                  href="#closing-cta"
                   className="ml-auto mt-6 inline-flex items-center gap-3 border-b border-porcelain/65 pb-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-porcelain transition-colors hover:border-cocoa hover:text-cocoa"
                 >
                   Explore the bakehouse
