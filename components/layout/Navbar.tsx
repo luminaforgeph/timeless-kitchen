@@ -77,8 +77,8 @@ export default function Navbar() {
             </span>
           </a>
 
-          <div className="hidden items-center justify-start gap-7 lg:flex">
-            <nav aria-label="Main navigation" className="flex items-center gap-7">
+          <div className="hidden items-center justify-start gap-10 lg:flex">
+            <nav aria-label="Main navigation" className="flex items-center justify-start gap-10">
               {navigation.map((item) => (
                 <a
                   key={item.href}
@@ -141,12 +141,13 @@ export default function Navbar() {
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.nav
+          <motion.div
             id="mobile-navigation"
+            role="navigation"
             aria-label="Mobile navigation"
-            initial={reduceMotion ? false : { opacity: 0, y: -12 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={reduceMotion ? undefined : { opacity: 0, y: -12 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: reduceMotion ? 0 : 0.24 }}
             className="absolute inset-x-0 top-full min-h-[calc(100svh-76px)] border-t border-cocoa/10 bg-porcelain px-5 pb-12 pt-8 text-cocoa lg:hidden"
           >
@@ -183,7 +184,7 @@ export default function Navbar() {
                 Port Harcourt, Nigeria
               </p>
             </div>
-          </motion.nav>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
