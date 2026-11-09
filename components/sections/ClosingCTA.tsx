@@ -3,6 +3,7 @@ const whatsappBase = "https://wa.me/2347031116044";
 export default function ClosingCTA() {
   return (
     <section
+      id="closing-cta"
       aria-labelledby="closing-cta-title"
       className="bg-oat py-20 text-cocoa sm:py-24 lg:py-32"
     >
